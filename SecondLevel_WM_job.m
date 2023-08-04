@@ -5,11 +5,8 @@ patients_dir = 'ROLANDIC';
 controls_dir = 'CONTROLS';
 func_specification = '/func/1stLevel_wm/optcens/03_both/';
 
-patients_list = {'P.TKMX99A', 'P.WDUK99A', 'P.FVIW99A', 'P.ZGVA99A', 'P.OWYV99A', 'P.NXFW99A', ...
-                 'P.JUQJ99A', 'P.NUSC99A'};
-controls_list = {'C.XWAO99A', 'C.NLPF99A', 'C.ZNOH99A', 'C.PMCH99A', 'C.SLTZ99A', 'C.UYLG99A', ...
-                 'C.ACDS99A', 'C.ZNMG99A', 'C.SDZE99A', 'C.MCPR99A', 'C.DSXW99A', 'C.QVBL99A', ...
-                 'C.IMDS99A', 'C.XBEZ99A', 'C.BUWG99A', 'C.KXOO99A', 'C.XGVX99A'};
+patients_list = {'pseudonyms'};
+controls_list = {'pseudonyms'};
 
 contrasts = {'Encoding>Retrieval', 'Encoding<Retrieval'};
 contrast_file = 'con_0001.nii,1';
