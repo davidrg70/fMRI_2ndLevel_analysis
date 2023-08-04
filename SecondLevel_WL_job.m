@@ -1,3 +1,6 @@
+% Created by David Garnica, david.garnica@med.uni-goettingen.de
+% October 2022, Universitätsmedizin Göttingen, Neurology Department
+
 % 2nd Level analysis for WL task (2 CONTRASTS: Animals>Fractals & Animals<Fractals)
 clear all;
 analysis_dir = '/home/uni10/nmri/projects/dgarnica/MRI_EEG_PROSPECTIVE/';
