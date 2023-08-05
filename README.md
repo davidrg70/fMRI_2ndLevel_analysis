@@ -1,4 +1,4 @@
-# fMRI_analyses
+#  fMRI_2ndLevel_analysis
 Scripts for fMRI 2nd level analyses (SPM)
 
 Script "SecondLevel_WL_job.m" carries out 2nd level analysis for Ebner et al (2011) task. 
