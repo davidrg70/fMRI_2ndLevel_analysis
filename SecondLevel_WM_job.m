@@ -1,5 +1,5 @@
 % Created by David Garnica, david.garnica@med.uni-goettingen.de
-% October 2022, Universitätsmedizin Göttingen, Neurology Department
+% 2022, Universitätsmedizin Göttingen, Neurology Department
 
 % 2nd Level analysis for WM task (2 CONTRASTS: Encoding>Retrieval & Encoding<Retrieval)
 clear all
