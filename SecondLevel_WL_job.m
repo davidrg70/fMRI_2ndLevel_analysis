@@ -30,6 +30,9 @@ clear matlabbatch;
 spm('defaults','fmri');
 spm_jobman('initcfg');
 
+% Load covariates - Age, sex (zeros for females, ones for males), and handedness (zeros for left-handers, ones for right-handers)
+load([analysis_dir,'SecondLevel_WL','/','covariates.mat']);
+
 matlabbatch{1}.spm.stats.factorial_design.dir = {'/home/uni10/nmri/projects/dgarnica/MRI_EEG_PROSPECTIVE/SecondLevel_WL'};
 matlabbatch{1}.spm.stats.factorial_design.des.t2.scans1 = patients;
 matlabbatch{1}.spm.stats.factorial_design.des.t2.scans2 = controls;
@@ -37,7 +40,18 @@ matlabbatch{1}.spm.stats.factorial_design.des.t2.dept = 0;
 matlabbatch{1}.spm.stats.factorial_design.des.t2.variance = 1;
 matlabbatch{1}.spm.stats.factorial_design.des.t2.gmsca = 0;
 matlabbatch{1}.spm.stats.factorial_design.des.t2.ancova = 0;
-matlabbatch{1}.spm.stats.factorial_design.cov = struct('c', {}, 'cname', {}, 'iCFI', {}, 'iCC', {});
+matlabbatch{1}.spm.stats.factorial_design.cov(1).c = [covariates.Age];
+matlabbatch{1}.spm.stats.factorial_design.cov(1).cname = 'Age';
+matlabbatch{1}.spm.stats.factorial_design.cov(1).iCFI = 1;
+matlabbatch{1}.spm.stats.factorial_design.cov(1).iCC = 1;
+matlabbatch{1}.spm.stats.factorial_design.cov(2).c = [covariates.Sex];
+matlabbatch{1}.spm.stats.factorial_design.cov(2).cname = 'Sex';
+matlabbatch{1}.spm.stats.factorial_design.cov(2).iCFI = 1;
+matlabbatch{1}.spm.stats.factorial_design.cov(2).iCC = 1;
+matlabbatch{1}.spm.stats.factorial_design.cov(3).c = [covariates.Handedness];
+matlabbatch{1}.spm.stats.factorial_design.cov(3).cname = 'Handedness';
+matlabbatch{1}.spm.stats.factorial_design.cov(3).iCFI = 1;
+matlabbatch{1}.spm.stats.factorial_design.cov(3).iCC = 1;
 matlabbatch{1}.spm.stats.factorial_design.multi_cov = struct('files', {}, 'iCFI', {}, 'iCC', {});
 matlabbatch{1}.spm.stats.factorial_design.masking.tm.tm_none = 1;
 matlabbatch{1}.spm.stats.factorial_design.masking.im = 1;
