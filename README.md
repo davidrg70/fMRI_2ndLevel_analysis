@@ -1,11 +1,11 @@
 #  fMRI_2ndLevel_analysis
 Scripts for fMRI 2nd level analyses (SPM)
 
-Script "SecondLevel_WL_job.m" carries out 2nd level analysis for Ebner et al (2011) task. 
-It performs 2-way T-tests (Patients >/< Controls, 2 cognitive conditions).
+"SecondLevel_1sTtest_WL_job.m" performs One-sample T-test for the 2 conditions of Ebner et al (2011) task.
 
-Script "SecondLevel_WM_job.m" carries out 2nd level analysis for Siffredi et al (2017) task. 
-It performs 2-way T-tests (Patients >/< Controls, 2 cognitive conditions).
+"SecondLevel_1sTtest_WL_job.m" performs Two-sample T-test for the 2 conditions of Ebner et al (2011) task.
 
-Script "SecondLevel_1WayTtest_WL_job.m" performs 2nd level analysis for Ebner et al (2011) task.
-It performs 1-way T-tests (Patients, Controls, or BOTH vs. 0, 2 cognitive conditions).
+"SecondLevel_1sTtest_WL_job.m" performs ANOVA for the 2 conditions of Ebner et al (2011) task.
+This code calculates ANOVAs to analyze the effect of one group, both groups, or compare the groups effect by adding a specific group covariate. The ANOVA are is calculated one condition (contrast) at a time.
+
+All scripts include age (in month) and sex as covariates.
