@@ -8,8 +8,7 @@ func_specification = '/func/1stLevel_wm/optcens/03_both/';
 patients_list = {'Pseudonyms'};
 controls_list = {'Pseudonyms'};
 
-contrasts = {'Effect of condition irrespective of groups: Encoding>Retrieval',...
- 'Effect of condition irrespective of groups: Retrieval>Encoding'};
+contrasts = {'Effect of condition: Encoding>Retrieval', 'Effect of condition: Retrieval>Encoding'};
 contrast_file = 'con_0001.nii,1';
 % NOTE FOR 1sample T-test CALCULATION:
 % the con_0001.nii corresponds to the Encoding>Retrieval comparison!
