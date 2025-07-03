@@ -8,11 +8,11 @@ func_specification = '/func/1stLevel_wl/optcens/03_both/';
 patients_list = {'Pseudonyms'};
 controls_list = {'Pseudonyms'};
 
-contrasts = {'Patients>Controls: Animals>Fractals', 'Patients>Controls: Fractals>Animals'};
+contrasts = {'Effect of condition: Phonological>Fractals', 'Effect of condition: Fractals>Phonological'};
 contrast_file = 'con_0001.nii,1';
 % NOTE FOR 1sample T-test CALCULATION: 
-% the con_0001.nii corresponds to the Animals>Fractals comparison!
-% the con_0002.nii corresponds to the Animals<Fractals comparison!
+% the con_0001.nii corresponds to the Phonological>Fractals comparison!
+% the con_0002.nii corresponds to the Phonological<Fractals comparison!
 % The contrast vector must be 0100 for Patients>Controls for A>F and
 % -1100 for Patients>Controls for F>A, when using
 % the con_0001.nii file (one contrast file is always two-sided!)
@@ -120,7 +120,7 @@ matlabbatch{4}.spm.stats.results.conspec(1).titlestr = '';
 matlabbatch{4}.spm.stats.results.conspec(1).contrasts = Inf;
 matlabbatch{4}.spm.stats.results.conspec(1).threshdesc = 'FWE';
 matlabbatch{4}.spm.stats.results.conspec(1).thresh = 0.05;
-matlabbatch{4}.spm.stats.results.conspec(1).extent = 0;
+matlabbatch{4}.spm.stats.results.conspec(1).extent = 10;
 matlabbatch{4}.spm.stats.results.conspec(1).conjunction = 1;
 matlabbatch{4}.spm.stats.results.conspec(1).mask.none = 1;
 % matlabbatch{4}.spm.stats.results.conspec(2).titlestr = '';
